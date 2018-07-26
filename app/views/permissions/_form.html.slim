@@ -1,0 +1,10 @@
+= simple_form_for(@permission) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :granted_to
+    = f.input :given_by
+    = f.input :permissions
+
+  .form-actions
+    = f.button :submit

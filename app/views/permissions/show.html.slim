@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Granted to:
+  = @permission.granted_to
+p
+  strong Given by:
+  = @permission.given_by
+p
+  strong Permissions:
+  = @permission.permissions
+
+=> link_to 'Edit', edit_permission_path(@permission)
+'|
+=< link_to 'Back', permissions_path

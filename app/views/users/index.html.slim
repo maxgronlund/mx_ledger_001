@@ -1,0 +1,27 @@
+h1 Listing users
+
+table
+  thead
+    tr
+      th Uuid
+      th Name
+      th Family name
+      th Email
+      th
+      th
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = link_to user.uuid, api_v1_user_by_uuid_path(user.uuid)
+        td = user.name
+        td = user.family_name
+        td = user.email
+        td = link_to 'Show', user
+        td = link_to 'Edit', edit_user_path(user)
+        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New User', new_user_path
