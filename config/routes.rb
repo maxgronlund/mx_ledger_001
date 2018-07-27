@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   resources :users
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:show, :index, :create]
+      resources :users, only: %i[show index create update]
       resources :user_by_uuid, only: [:show]
       resources :user_by_email, only: [:show]
       resources :user_by_public_key, only: [:show]
-      resources :permissions, only: [:show, :create]
+      resources :permissions, only: [:show, :create, :update]
 
     end
   end
