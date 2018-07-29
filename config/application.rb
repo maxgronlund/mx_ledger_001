@@ -10,8 +10,9 @@ module MxLedger001
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    config.uuid =  "e72564f4-ac80-4701-a2b7-4683e26ff67c"
+    config.uuid =  "f08e126d-b2eb-4a1f-beba-541526864e92"
     config.site_name =  "Public ledger 001"
+    config.administrator = "f08e126d-b2eb-4a1f-beba-541526864e92"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

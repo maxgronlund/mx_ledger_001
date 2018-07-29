@@ -91,4 +91,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.administrator = "5e8f143a-5ed5-429e-a38d-a311b77f3615"
 end

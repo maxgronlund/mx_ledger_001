@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :transactions
   resources :permissions
   resources :users
   namespace :api do
@@ -9,7 +10,8 @@ Rails.application.routes.draw do
       resources :user_by_email, only: [:show]
       resources :user_by_public_key, only: [:show]
       resources :permissions, only: [:show, :create, :update]
-
+      resources :transactions, only: %i[create show index]
+      resources :retrieve_transaction_requests, only: %i[index]
     end
   end
   namespace :system do

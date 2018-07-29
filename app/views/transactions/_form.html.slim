@@ -1,0 +1,11 @@
+= simple_form_for(@transaction) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :transaction_type, collection: Transaction::TRANSACTION_TYPES, include_blank: false
+    = f.input :sender
+    = f.input :recipient
+    = f.input :meta
+
+  .form-actions
+    = f.button :submit

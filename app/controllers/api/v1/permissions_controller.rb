@@ -7,7 +7,6 @@ class Api::V1::PermissionsController < ApplicationController
 
   def update
     params.permit!
-
     permission
       .update(
         permissions: params['permissions']

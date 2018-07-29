@@ -11,5 +11,11 @@ html
 
     h4 = link_to 'Consensus server 001 / ledger 001', root_path
     = link_to 'Admin', system_admin_index_path
-
+    '&nbsp;|&nbsp;
+    =< link_to 'Users', users_path
+    '&nbsp;|&nbsp;
+    =< link_to 'Permissions', permissions_path
+    '&nbsp;|&nbsp;
+    =< link_to 'Transactions', transactions_path
+    hr
     = yield
